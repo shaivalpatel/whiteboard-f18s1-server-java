@@ -1,10 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <title>Profile</title>
 </head>
 <body>
+<html>
+<head>
+    <meta
+            name="viewport"
+            content="width=device-width,
+initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div class="container-fluid">
+
     <h1>Profile</h1>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="username">
+            Username
+        </label>
+        <div class="col-sm-10">
+            <input type ="text"
+                   id="username"
+                   class="form-control"
+                   placeholder="Meera">
+        </div>
+    </div>
+
+    <div class="form-group row">
+
+        <label class="col-sm-2 col-form-control col-form-label" for="phone">
+            Phone
+        </label>
+        <div class="col-sm-10">
+            <input type ="number"
+                   id="phone"
+                   class="form-control"
+
+                   placeholder="9925016725">
+        </div>
+    </div>
+    <div class="form-group row">
+
+        <label class="col-sm-2 col-form-control col-form-label" for="email">
+            Email
+        </label>
+        <div class="col-sm-10">
+            <input type ="email"
+                   id="email"
+                   class="form-control"
+
+                   placeholder="alice@wonderland.com">
+        </div>
+    </div>
+    <div class="form-group row">
+
+        <label class="col-sm-2 col-form-control col-form-label" >
+            Role
+        </label>
+        <div class="col-sm-10">
+            <select class="form-control">
+                <option value="ADMIN">
+                    Administrtor
+                </option>
+                <option value="FACULTY">
+                    Faculty
+                </option>
+                <option value="STUDENT">
+                    Student
+                </option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group row">
+
+        <label class="col-sm-2 col-form-control col-form-label" for="DOB">
+            Email
+        </label>
+        <div class="col-sm-10">
+            <input type ="date"
+                   id="DOB"
+                   class="form-control"
+
+                   placeholder="mm/dd/yyyy">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <button class="btn btn-success btn-block">
+                Update
+            </button>
+
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <a href="index.html">
+                <button class="btn btn-danger btn-block">
+                    Logout
+                </button>
+            </a>
+
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
 </body>
 </html>
