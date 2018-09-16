@@ -1,0 +1,24 @@
+
+.table-div
+{
+    height: 600px;
+    overflow-y: auto;
+    borde-style:solid;
+}
+.table-row
+{
+    height : 50px;
+    border-bottom: 1px solid grey;
+}
+
+.table-side-columns{
+    height: 50px;
+}
+.bg-lightgray
+{
+    background-color: lightgray;
+}
+
+.addbtn{
+    color: red;
+}
