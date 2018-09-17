@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="course-editor.style.client.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Course-Editor</title>
+</head>
+<body>
+    <div class="contailer-fluid">
+            <div class="navbar navbar-light bg-dark">
+                <div style="color: white" class="col-1">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div >
+                    <h2 class="text-primary">WhiteBoard</h2>
+                </div>
+                <div >
+                    <button class="btn bg-dark text-white">Build</button>
+                </div>
+                <div >
+                    <button class="btn bg-dark text-white">Pages</button>
+                </div>
+                <div >
+                    <button class="btn bg-dark text-white">Themes</button>
+                </div>
+                <div >
+                    <button class="btn bg-dark text-white">Store</button>
+                </div>
+                <div >
+                    <button class="btn bg-dark text-white">Apps</button>
+                </div>
+                <div >
+                    <button class="btn bg-dark text-white">Settings</button>
+                </div>
+                <div >
+                    <a href="#">
+                        <i style="color: white" class="fas fa-plus">
+                        </i>
+                    </a>
+                </div>
+            </div>
+        <div class="row left-div">
+            <div class="col-2 bg-dark">
+                <ul class="nav flex-column nav-pills">
+                    <li>
+                        <div class="row">
+                            <div class="col-9"><a class="nav-link" href="#">Module 1 </a></div>
+                            <div class="col-2"><button class="btn btn-dark"><i class="fas fa-times"></i></button></div>
+
+                            </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-9"><a class="nav-link" href="#">Module 2 </a></div>
+                            <div class="col-2"><button class="btn btn-dark"><i class="fas fa-times"></i></button></div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-9"><a class="nav-link" href="#">Module 3 </a></div>
+                            <div class="col-2"><button class="btn btn-dark"><i class="fas fa-times"></i></button></div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-9"><a class="nav-link" href="#">Module 4 </a></div>
+                            <div class="col-2"><button class="btn btn-dark"><i class="fas fa-times"></i></button></div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-9 "><input class="form-control" id="add-module" type="text" PLACEHOLDER="module"></div>
+                            <div class="col-2"><button class="btn btn-dark" for="add-module"><i  class="fas fa-plus text-primary"></i></button></div>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-10">
+                <div class=" bg-white topic">
+                        <button class="btn bg-primary text-white">Topic 1 </button>
+                        <button class="btn bg-primary text-white">Topic 2</button>
+                        <button class="btn bg-primary text-white">Topic 3</button>
+                        <button class="btn bg-primary text-white">Topic 4</button>
+                        <a href="#">
+                            <i  class="fas fa-plus text-primary">
+                            </i>
+                        </a>
+                    </div>
+                <div class="row">
+                    <div class="col-8 ">
+                        &nbsp
+                    </div>
+                    <div class="col-4">
+                        <div class="float-right">
+                            <button  class="btn btn-success ">Save</button>
+                            Preview
+                            <button class="btn btn-white" >
+                               <i class="fas fa-toggle-on fa-2x"></i>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-8">
+                                    <h1>Heading Widget</h1>
+                                </div>
+                                <div class="col-4 ">
+                                    <div class="float-right">
+                                        <button class="btn bg-warning arrowbtn"> <i class="fas fa-arrow-up"></i></button>
+                                        <button  class="btn bg-warning arrowbtn"> <i class="fas fa-arrow-down"></i></button>
+                                        <select>
+                                            <option value="Heading">Heading</option>
+                                            <option value="Heading">Paragraph</option>
+                                            <option value="Heading">List</option>
+                                            <option value="Heading">Image</option>
+                                            <option value="Heading">Link</option>
+                                        </select>
+                                        <button class="btn btn-danger"><i class="fas fa-times"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                    <div class="form-group row">
+                                        <input type="text" placeholder="Heading Text" class="form-control">
+                                    </div>
+                                    <div class="form-group row">
+                                        <select class="form-control">
+                                            <option value="heading 1">Heading 1</option>
+                                            <option value="heading 1">Heading 2</option>
+                                            <option value="heading 1">Heading 3</option>
+                                            <option value="heading 1">Heading 4</option>
+                                            <option value="heading 1">Heading 5</option>
+                                            <option value="heading 1">Heading 6</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group row">
+                                    <input type="text" placeholder="Widget Name" class="form-control">
+                                    </div>
+                                    <div>
+                                        <h3>Preview</h3>
+                                        Heading text
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item"><div class="row">
+                            <div class="col-8">
+                                <h1>Paragraph Widget</h1>
+                            </div>
+                            <div class="col-4 ">
+                                <div class="float-right">
+                                    <button class="btn bg-warning arrowbtn"> <i class="fas fa-arrow-up"></i></button>
+                                    <button  class="btn bg-warning arrowbtn"> <i class="fas fa-arrow-down"></i></button>
+                                    <select>
+                                        <option value="Heading">Heading</option>
+                                        <option value="Heading">Paragraph</option>
+                                        <option value="Heading">List</option>
+                                        <option value="Heading">Image</option>
+                                        <option value="Heading">Link</option>
+                                    </select>
+                                    <button class="btn btn-danger">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                            <div>
+                                <div class="form-group row">
+                                    <textarea type="text" placeholder="Lorem ispsum" class="form-control"></textarea>
+                                </div>
+                                <div class="form-group row">
+                                    <input type="text" placeholder="Widget Name" class="form-control">
+                                </div>
+                                <div>
+                                    <h3>Preview</h3>
+                                    lorem ipsum
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item">
+                        <div class="row">
+                        <div class="col-8">
+                            <h1>List Widget</h1>
+                        </div>
+                        <div class="col-4 ">
+                            <div class="float-right">
+                                <button class="btn bg-warning arrowbtn">
+                                    <i class="fas fa-arrow-up"></i>
+                                </button>
+                                <button  class="btn bg-warning arrowbtn">
+                                    <i class="fas fa-arrow-down"></i>
+                                </button>
+                                <select>
+                                    <option value="Heading">Heading</option>
+                                    <option value="Heading">Paragraph</option>
+                                    <option value="Heading">List</option>
+                                    <option value="Heading">Image</option>
+                                    <option value="Heading">Link</option>
+                                </select>
+                                <button class="btn btn-danger"><i class="fas fa-times"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                        <div>
+                            <div class="form-group row">
+                                <textarea type="text" placeholder="Put each item in a new row " class="form-control"></textarea>
+                            </div>
+                            <div class="form-group row">
+                                <select class="form-control">
+                                    <option value="heading 1">Ordered List</option>
+                                    <option value="heading 1">Unordered List</option>
+                                </select>
+                            </div>
+                            <div class="form-group row">
+                                <input type="text" placeholder="Widget Name" class="form-control">
+                            </div>
+                            <div>
+                                <h3>Preview</h3>
+                                <ul style="list-style-type:disc">
+                                    <li>Put each item in a new row </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li></li>
+                        <li class="list-group-item"><div class="row">
+                            <div class="col-8">
+                                <h1>Image Widget</h1>
+                            </div>
+                            <div class="col-4 ">
+                                <div class="float-right">
+                                    <button class="btn bg-warning arrowbtn"> <i class="fas fa-arrow-up"></i></button>
+                                    <button  class="btn bg-warning arrowbtn"> <i class="fas fa-arrow-down"></i></button>
+                                    <select>
+                                        <option value="Heading">Heading</option>
+                                        <option value="Heading">Paragraph</option>
+                                        <option value="Heading">List</option>
+                                        <option value="Heading">Image</option>
+                                        <option value="Heading">Link</option>
+                                    </select>
+                                    <button class="btn btn-danger"><i class="fas fa-times"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                            <div>
+                                <div class="form-group row">
+                                    <input type="text" placeholder="https://techcrunch.com/wp-content/uploads/2018/03/gettyimages-705351545.jpg?w=730&crop=1" class="form-control">
+                                </div>
+                                <div class="form-group row">
+                                    <input type="text" placeholder="Widget Name" class="form-control">
+                                </div>
+                                <div>
+                                    <h3>Preview</h3>
+                                    <img src="https://techcrunch.com/wp-content/uploads/2018/03/gettyimages-705351545.jpg?w=730&crop=1" >
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item"><div class="row">
+                            <div class="col-8">
+                                <h1>Link Widget</h1>
+                            </div>
+                            <div class="col-4 ">
+                                <div class="float-right">
+                                    <button class="btn bg-warning arrowbtn">
+                                        <i class="fas fa-arrow-up"></i>
+                                    </button>
+                                    <button  class="btn bg-warning arrowbtn">
+                                        <i class="fas fa-arrow-down"></i>
+                                    </button>
+                                    <select>
+                                        <option value="Heading">Heading</option>
+                                        <option value="Heading">Paragraph</option>
+                                        <option value="Heading">List</option>
+                                        <option value="Heading">Image</option>
+                                        <option value="Heading">Link</option>
+                                    </select>
+                                    <button class="btn btn-danger">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                            <div>
+                                <div class="form-group row">
+                                    <input type="url" placeholder="https://www.youtube.com/" class="form-control">
+                                </div>
+                                <div class="form-group row">
+                                    <input type="text" placeholder="Link Text" class="form-control">
+                                </div>
+                                <div class="form-group row">
+                                    <input type="url" placeholder="https://www.youtube.com/" class="form-control">
+                                </div>
+                                <div class="form-group row">
+                                    <input type="text" placeholder="Widget Name" class="form-control">
+                                </div>
+                                <div>
+                                    <h3>Preview</h3>
+                                    <a href="https://www.youtube.com/">Link Text</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-danger float-right">
+                    <a href="#">
+                        <i class="fas fa-plus-square fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
