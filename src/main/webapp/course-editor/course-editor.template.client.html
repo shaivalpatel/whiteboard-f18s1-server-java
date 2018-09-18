@@ -5,16 +5,19 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="course-editor.style.client.css" rel="stylesheet">
     <meta charset="UTF-8">
+
     <title>Course-Editor</title>
 </head>
 <body>
     <div class="contailer-fluid">
             <div class="navbar navbar-light bg-dark">
-                <div style="color: white" class="col-1">
-                    <i class="fas fa-times"></i>
+                <div style="color: white" class="col-sm-1">
+                    <a href="/Home/course-manager.template.client.html">
+                        <i class="fas fa-times"></i>
+                    </a>
                 </div>
                 <div >
-                    <h2 class="text-primary">WhiteBoard</h2>
+                    <h2 class="text-primary">CS 5610 WebDev</h2>
                 </div>
                 <div >
                     <button class="btn bg-dark text-white">Build</button>
@@ -42,46 +45,46 @@
                 </div>
             </div>
         <div class="row left-div">
-            <div class="col-2 bg-dark">
+            <div class="col-sm-2 bg-dark">
                 <ul class="nav flex-column nav-pills">
-                    <li>
-                        <div class="row">
-                            <div class="col-9"><a class="nav-link" href="#">Module 1 </a></div>
-                            <div class="col-2"><button class="btn btn-dark"><i class="fas fa-times"></i></button></div>
+                    <li class="nav-item">
+                        <div class="row ">
+                            <div class="col-sm-9"><a class="nav-link" href="#">Module 1 </a></div>
+                            <div class="col-sm-2"><button class="btn btn-dark"><i class="fas fa-times"></i></button></div>
 
                             </div>
                     </li>
                     <li>
                         <div class="row">
-                            <div class="col-9"><a class="nav-link" href="#">Module 2 </a></div>
-                            <div class="col-2"><button class="btn btn-dark"><i class="fas fa-times"></i></button></div>
+                            <div class="col-sm-9"><a class="nav-link" href="#">Module 2 </a></div>
+                            <div class="col-sm-2"><button class="btn btn-dark"><i class="fas fa-times"></i></button></div>
 
                         </div>
                     </li>
                     <li>
                         <div class="row">
-                            <div class="col-9"><a class="nav-link" href="#">Module 3 </a></div>
-                            <div class="col-2"><button class="btn btn-dark"><i class="fas fa-times"></i></button></div>
+                            <div class="col-sm-9"><a class="nav-link" href="#">Module 3 </a></div>
+                            <div class="col-sm-2"><button class="btn btn-dark"><i class="fas fa-times"></i></button></div>
 
                         </div>
                     </li>
                     <li>
                         <div class="row">
-                            <div class="col-9"><a class="nav-link" href="#">Module 4 </a></div>
-                            <div class="col-2"><button class="btn btn-dark"><i class="fas fa-times"></i></button></div>
+                            <div class="col-sm-9"><a class="nav-link" href="#">Module 4 </a></div>
+                            <div class="col-sm-2"><button class="btn btn-dark"><i class="fas fa-times"></i></button></div>
 
                         </div>
                     </li>
                     <li>
                         <div class="row">
-                            <div class="col-9 "><input class="form-control" id="add-module" type="text" PLACEHOLDER="module"></div>
-                            <div class="col-2"><button class="btn btn-dark" for="add-module"><i  class="fas fa-plus text-primary"></i></button></div>
+                            <div class="col-sm-9 "><input class="form-control" id="add-module" type="text" PLACEHOLDER="module"></div>
+                            <div class="col-sm-2"><button class="btn btn-dark" for="add-module"><i  class="fas fa-plus text-primary"></i></button></div>
 
                         </div>
                     </li>
                 </ul>
             </div>
-            <div class="col-10">
+            <div class="col-sm-10">
                 <div class=" bg-white topic">
                         <button class="btn bg-primary text-white">Topic 1 </button>
                         <button class="btn bg-primary text-white">Topic 2</button>
@@ -93,10 +96,10 @@
                         </a>
                     </div>
                 <div class="row">
-                    <div class="col-8 ">
+                    <div class="col-sm-8 ">
                         &nbsp
                     </div>
-                    <div class="col-4">
+                    <div class="col-sm-4">
                         <div class="float-right">
                             <button  class="btn btn-success ">Save</button>
                             Preview
@@ -111,10 +114,10 @@
                     <ul class="list-group">
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col-8">
+                                <div class="col-sm-8">
                                     <h1>Heading Widget</h1>
                                 </div>
-                                <div class="col-4 ">
+                                <div class="col-sm-4 ">
                                     <div class="float-right">
                                         <button class="btn bg-warning arrowbtn"> <i class="fas fa-arrow-up"></i></button>
                                         <button  class="btn bg-warning arrowbtn"> <i class="fas fa-arrow-down"></i></button>
@@ -153,10 +156,10 @@
                             </div>
                         </li>
                         <li class="list-group-item"><div class="row">
-                            <div class="col-8">
+                            <div class="col-sm-8">
                                 <h1>Paragraph Widget</h1>
                             </div>
-                            <div class="col-4 ">
+                            <div class="col-sm-4 ">
                                 <div class="float-right">
                                     <button class="btn bg-warning arrowbtn"> <i class="fas fa-arrow-up"></i></button>
                                     <button  class="btn bg-warning arrowbtn"> <i class="fas fa-arrow-down"></i></button>
@@ -189,10 +192,10 @@
 
                         <li class="list-group-item">
                         <div class="row">
-                        <div class="col-8">
+                        <div class="col-sm-8">
                             <h1>List Widget</h1>
                         </div>
-                        <div class="col-4 ">
+                        <div class="col-sm-4 ">
                             <div class="float-right">
                                 <button class="btn bg-warning arrowbtn">
                                     <i class="fas fa-arrow-up"></i>
@@ -233,10 +236,10 @@
                         </div>
                     </li></li>
                         <li class="list-group-item"><div class="row">
-                            <div class="col-8">
+                            <div class="col-sm-8">
                                 <h1>Image Widget</h1>
                             </div>
-                            <div class="col-4 ">
+                            <div class="col-sm-4 ">
                                 <div class="float-right">
                                     <button class="btn bg-warning arrowbtn"> <i class="fas fa-arrow-up"></i></button>
                                     <button  class="btn bg-warning arrowbtn"> <i class="fas fa-arrow-down"></i></button>
@@ -265,10 +268,10 @@
                             </div>
                         </li>
                         <li class="list-group-item"><div class="row">
-                            <div class="col-8">
+                            <div class="col-sm-8">
                                 <h1>Link Widget</h1>
                             </div>
-                            <div class="col-4 ">
+                            <div class="col-sm-4 ">
                                 <div class="float-right">
                                     <button class="btn bg-warning arrowbtn">
                                         <i class="fas fa-arrow-up"></i>
