@@ -32,7 +32,41 @@
 
     function createUser() {
 
+        var username = $usernameFld.val();
+        $usernameFld.val("");
 
+        var firstname = $firstNameFld.val();
+        $firstNameFld.val("");
+
+        var lastname = $lastNameFld.val();
+        $lastNameFld.val("");
+
+        var user = {
+          username: username,
+          firstname: firstname,
+          lastname: lastname
+        };
+
+        userArray.push(user);
+
+        console.log(userArray);
+
+
+
+        var timestamp= (new Date()).getTime();
+        var newuser = $userRowTemplate.clone();
+        newuser.attr("id", timestamp)
+            .find(".wbdv-username")
+            .html(username);
+        newuser.find(".wbdv-first-name")
+            .html(firstname);
+        newuser.find('.wbdv-last-name')
+            .html(lastname);
+        newuser.find(".wbdv-remove")
+            .click(deleteUser);
+        newuser.find('wbdv-edit')
+            .click(findUserById);
+        $tbody.append(newuser);
 
 
 
@@ -51,7 +85,8 @@
     }
 
     function findUserById(event) {
-       
+        
+
 
 
 
