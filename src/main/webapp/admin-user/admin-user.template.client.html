@@ -1,128 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <meta charset="UTF-8">
-    <title>Admin-User</title>
+    <title>User Admin</title>
+    <link rel="stylesheet" href=
+            "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href=
+            "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="user-admin.style.client.css" rel="stylesheet" />
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../services/user.service.client.js"></script>
+    <script src="user-admin.component.client.js"></script>
 </head>
 <body>
-    <div class="container-fluid">
-        <h1>user admin</h1>
-        <table class="table" >
-            <thead>
-                <tr>
-                    <th>
-                        Username
-                    </th>
-                    <th>
-                        First Name
-                    </th>
-                    <th>
-                        Last name
-                    </th>
-                    <th>
-                        Role
-                    </th>
-                    <th>
+<div class="container-fluid">
+    <h1>User Admin</h1>
 
-                    </th>
-
-                </tr>
-                <tr>
-                    <th>
-                       <input class="form-control" type="text" placeholder="Username">
-                    </th>
-                    <th>
-                        <input class="form-control" type="text" placeholder="First Name">
-                    </th>
-                    <th>
-                        <input  class="form-control" type="text" placeholder="Last Name">
-                    </th>
-                    <th>
-                        <select>
-                            <option value="ADMIN">
-                                Administrtor
-                            </option>
-                            <option value="FACULTY">
-                                Faculty
-                            </option>
-                            <option value="STUDENT">
-                                Student
-                            </option>
-                        </select>
-                    </th>
-                    <th>
-                        <button class="btn btn-success">
-                            Create
-                        </button>
-                        <button class="btn btn-primary">
-                            Update
-                        </button>
-                </th>
-
-                </tr>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Username</th>
+            <th>Password</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Role</th>
+            <th>&nbsp;</th>
+        </tr>
+        <tr class="wbdv-form">
+        <td><input id="usernameFld" class="form-control"
+                   placeholder="Username" /></td>
+        <td><input id="passwordFld" class="form-control"
+                   placeholder="Password" /></td>
+        <td><input id="firstNameFld" class="form-control"
+                   placeholder="First Name" /></td>
+        <td><input id="lastNameFld" class="form-control"
+                   placeholder="Last Name" /></td>
+        <td><select id="roleFld" class="form-control">
+            <option value="FACULTY">Faculty</option>
+            <option value="STUDENT">Student</option>
+            <option value="ADMIN">Admin</option>
+        </select></td>
+            <td><span class="float-right" style="white-space: nowrap">
+      <i class="fa-2x fa fa-search wbdv-search"></i>
+                <i class="fa-2x fa fa-plus wbdv-create  " id="createBtn"></i>
+                <i class="fa-2x fa fa-check wbdv-update" id="updatebtn"></i>
+  </span></td>
+        </tr>
 
 
+        </thead>
+        <tbody class="wbdv-tbody">
+        <tr class="wbdv-template wbdv-user">
+            <td class="wbdv-username">ada</td>
+            <td>&nbsp;</td>
+            <td class="wbdv-first-name">Ada</td>
+            <td class="wbdv-last-name">Lovelace</td>
+            <td class="wbdv-role">FACULTY</td>
+            <td class="wbdv-actions">
+        <span class="float-right">
+          <i  class="fa-2x fa fa-times wbdv-remove"></i>
+          <i  class="fa-2x fa fa-pencil wbdv-edit"></i>
+        </span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
 
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        AWonderland
-                    </td>
-                    <td>
-                        Alice
-                    </td>
-                    <td>
-                        Wonderland
-                    </td>
-                    <td>
-                        ADMIN
-                    </td>
-                    <td>
-                        <button>Edit</button>
-                        <button>Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        AWonderland
-                    </td>
-                    <td>
-                        Alice
-                    </td>
-                    <td>
-                        Wonderland
-                    </td>
-                    <td>
-                        ADMIN
-                    </td>
-                    <td>
-                        <button>Edit</button>
-                        <button>Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        AWonderland
-                    </td>
-                    <td>
-                        Alice
-                    </td>
-                    <td>
-                        Wonderland
-                    </td>
-                    <td>
-                        ADMIN
-                    </td>
-                    <td>
-                        <button>Edit</button>
-                        <button>Delete</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+</div>
+
 </body>
 </html>
