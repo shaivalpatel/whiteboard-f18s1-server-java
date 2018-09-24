@@ -5,7 +5,7 @@
     var $firstNameFld, $lastNameFld,$roleFld;
     var $userRowTemplate, $tbody;
     var userService = new AdminUserServiceClient();
-
+    var searchUsers =[];
     var userArray = [];
 
     var ji;
@@ -20,6 +20,8 @@
         $searchBtn = $(".wbdv-search");
         $roleFld =$("#roleFld");
         $createBtn.click(createUser);
+        $searchBtn.click(selectUser);
+
 
 
         $userRowTemplate= $(".wbdv-template");
@@ -121,7 +123,33 @@
         var tr = button.parents(".wbdv-template");
         tr.remove();
     }
-    function selectUser() { }
+    function selectUser() {
+        $usernameFld = $("#usernameFld")
+        $passwordFld = $('#passwordFld');
+        $firstNameFld = $("#firstNameFld")
+        $lastNameFld =$("#lastNameFld");
+        $roleFld =$("#roleFld");
+
+
+        for (i=0; i<userArray.length;i++){
+            var suser=userArray[i];
+            if ($usernameFld.val()==suser.username
+                || $firstNameFld.val()== suser.firstName
+                || $lastNameFld.val()==suser.lastName
+                || $roleFld.val() == suser.role){
+
+                searchUsers.push(suser)
+
+            }
+
+        }
+
+        
+        renderUsers(searchUsers);
+
+
+
+    }
     function updateUser() {
         console.log(userArray);
         for (i = 0; i < userArray.length; i++) {
@@ -135,11 +163,18 @@
                 userArray[i].role = $roleFld.val();
                 console.log(userArray[i])
 
+
             }
             renderUsers(userArray);
 
 
         }
+
+        $usernameFld.val("");
+        $firstNameFld.val("");
+        $lastNameFld.val("");
+        $roleFld.val("");
+
 
     }
 
@@ -156,7 +191,7 @@
         uu.find("#lastNameFld").val(newu.lastName);
         uu.find("#roleFld").val(newu.role);
         uu.find("#updateBtn").click(updateUser);
-        uu.find('createBtn').click(createUser());
+        uu.find('#createBtn').click(createUser);
 
 
         $thead = $("thead");
@@ -201,7 +236,7 @@
             $tbody.append(newuser);
 
         }
-        
+
     }
 
 })();
