@@ -11,6 +11,7 @@
     var ji;
     $(main);
     function main(){
+
         $usernameFld = $('#usernameFld');
         $passwordFld = $('#passwordFld');
         $firstNameFld = $('#firstNameFld');
@@ -21,11 +22,7 @@
         $roleFld =$("#roleFld");
         $createBtn.click(createUser);
         $searchBtn.click(selectUser);
-
-
-
         $userRowTemplate= $(".wbdv-template");
-
         $tbody = $(".wbdv-tbody");
 
         findAllUsers();
@@ -36,15 +33,11 @@
         var timestamp= (new Date()).getTime();
         var username = $usernameFld.val();
         $usernameFld.val("");
-
         var firstname = $firstNameFld.val();
         $firstNameFld.val("");
-
         var lastname = $lastNameFld.val();
         $lastNameFld.val("");
-
         var role = $roleFld.val();
-
         var user = {
             id: timestamp,
           username: username,
@@ -106,17 +99,6 @@
         var ulname = $("#"+i).children(".wbdv-last-name").html();
         var urole = $("#"+i).children(".wbdv-role").html();
 */
-
-
-
-
-
-
-
-
-
-
-
     }
     function deleteUser(event) {
         var button=$(event.currentTarget);
@@ -144,7 +126,7 @@
 
         }
 
-        
+
         renderUsers(searchUsers);
 
 

@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>User Admin</title>
     <link rel="stylesheet" href=
             "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
@@ -13,12 +14,15 @@
     <script src="../services/user.service.client.js"></script>
     <script src="user-admin.component.client.js"></script>
 </head>
-<body>
-<div class="container-fluid">
-    <h1>User Admin</h1>
+<body class="bg-dark">
+<div class="container-fluid bg-dark">
+    <div class="bg-dark">
+        <h1 class="text-primary">User Admin</h1>
+    </div>
 
-    <table class="table">
-        <thead>
+
+    <table class="table table-hover table-dark table-responsive-sm table-striped">
+        <thead >
         <tr>
             <th>Username</th>
             <th>Password</th>
@@ -27,7 +31,7 @@
             <th>Role</th>
             <th>&nbsp;</th>
         </tr>
-        <tr class="wbdv-form">
+        <tr class="wbdv-form text-primary ">
         <td><input id="usernameFld" class="form-control"
                    placeholder="Username" /></td>
         <td><input id="passwordFld" class="form-control"
@@ -37,14 +41,15 @@
         <td><input id="lastNameFld" class="form-control"
                    placeholder="Last Name" /></td>
         <td><select id="roleFld" class="form-control">
+            <option value="FACULTY">Select Role</option>
             <option value="FACULTY">Faculty</option>
             <option value="STUDENT">Student</option>
             <option value="ADMIN">Admin</option>
         </select></td>
             <td><span class="float-right" style="white-space: nowrap">
-      <i class="fa-2x fa fa-search wbdv-search"></i>
-                <i class="fa-2x fa fa-plus wbdv-create  " id="createBtn"></i>
-                <i class="fa-2x fa fa-check wbdv-update" id="updateBtn"></i>
+      <i class="fa-2x fa text-primary fa-search wbdv-search"></i>
+                <i class="fa-2x fa fa-plus wbdv-create text-success " id="createBtn"></i>
+                <i class="fa-2x fa fa-check wbdv-update text-info" id="updateBtn"></i>
   </span></td>
         </tr>
 
@@ -59,8 +64,8 @@
             <td class="wbdv-role">FACULTY</td>
             <td class="wbdv-actions">
         <span class="float-right">
-          <i  class="fa-2x fa fa-times wbdv-remove"></i>
-          <i  class="fa-2x fa fa-pencil wbdv-edit"></i>
+          <i  class="fa-2x text-danger fa fa-times wbdv-remove"></i>
+          <i  class="fa-2x fa fa-pencil text-warning wbdv-edit"></i>
         </span>
             </td>
         </tr>
