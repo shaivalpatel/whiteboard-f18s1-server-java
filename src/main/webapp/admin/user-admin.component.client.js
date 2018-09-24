@@ -20,6 +20,7 @@
         $updateBtn= $('#updateBtn');
         $searchBtn = $(".wbdv-search");
         $roleFld =$("#roleFld");
+        console.log($roleFld.val());
         $createBtn.click(createUser);
         $searchBtn.click(selectUser);
         $userRowTemplate= $(".wbdv-template");
@@ -49,10 +50,6 @@
         userArray.push(user);
 
         console.log(userArray);
-
-
-
-
         renderUsers(userArray);
 
 
