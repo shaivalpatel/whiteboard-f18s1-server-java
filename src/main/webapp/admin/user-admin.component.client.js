@@ -21,7 +21,6 @@ var formclone
         $updateBtn= $('#updateBtn');
         $searchBtn = $(".wbdv-search");
         $roleFld =$("#roleFld");
-        console.log($roleFld.val());
         $createBtn.click(createUser);
         $searchBtn.click(selectUser);
         $userRowTemplate= $(".wbdv-template");
@@ -51,7 +50,10 @@ var formclone
         userService.createUser(user);
         findAllUsers();
 
-
+        $thead2 =$("thead");
+        var removeform = $(".wbdv-form");
+        removeform.remove();
+        $thead2.append(formclone);
 
 
 
@@ -127,7 +129,7 @@ var formclone
 
     }
     function updateUser() {
-        console.log(userArray);
+
         var updateuser={
             username :$usernameFld.val(),
             firstName : $firstNameFld.val(),
@@ -155,7 +157,7 @@ var formclone
     function renderUser(user) {
 
         var newu=user;
-        console.log(newu);
+
         var updateform = $(".wbdv-form");
         var uu= $(".wbdv-form").clone();
 
@@ -183,13 +185,8 @@ var formclone
 
         for(var i=0; i<users.length; i++) {
 
-            console.log();
+
             var user = users[i];
-
-
-
-
-
             var newuser = $userRowTemplate.clone();
             newuser.attr('id', user.id);
             newuser.find('.wbdv-username')

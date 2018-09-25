@@ -71,11 +71,7 @@ function AdminUserServiceClient() {
         for (i = 0; i < users.length; i++) {
 
             if(id==users[i].id){
-
-                console.log("hello");
                 users.splice(i,1);
-                console.log(users);
-
             }
         }
         
