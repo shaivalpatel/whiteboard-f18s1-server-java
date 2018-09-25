@@ -67,11 +67,11 @@
 
         updateform.remove();
 
-        $thead.append(uu)
-        $usernameFld = $("#usernameFld")
+        $thead.append(uu);
+        $usernameFld = $("#usernameFld");
         $passwordFld = $('#passwordFld');
-        $firstNameFld = $("#firstNameFld")
-        $lastNameFld =$("#lastNameFld")
+        $firstNameFld = $("#firstNameFld");
+        $lastNameFld =$("#lastNameFld");
 
 
 
@@ -200,11 +200,11 @@
 
         updateform.remove();
 
-        $thead.append(uu)
-        $usernameFld = $("#usernameFld")
+        $thead.append(uu);
+        $usernameFld = $("#usernameFld");
         $passwordFld = $('#passwordFld');
-        $firstNameFld = $("#firstNameFld")
-        $lastNameFld =$("#lastNameFld")
+        $firstNameFld = $("#firstNameFld");
+        $lastNameFld =$("#lastNameFld");
 
     }
     function renderUsers(users) {
