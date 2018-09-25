@@ -5,19 +5,20 @@
     var $firstNameFld, $lastNameFld,$roleFld;
     var $userRowTemplate, $tbody;
     var userService = new AdminUserServiceClient();
+var formclone
     var searchUsers =[];
     var userArray = [];
 
     var ji;
     $(main);
     function main(){
-
+        formclone=$(".wbdv-form").clone();
         $usernameFld = $('#usernameFld');
         $passwordFld = $('#passwordFld');
         $firstNameFld = $('#firstNameFld');
         $lastNameFld = $('#lastNameFld');
         $createBtn = $('#createBtn');
-
+        $updateBtn= $('#updateBtn');
         $searchBtn = $(".wbdv-search");
         $roleFld =$("#roleFld");
         console.log($roleFld.val());
@@ -87,10 +88,10 @@
 
             }
         }
-        $updateBtn= $('#updateBtn');
+
         console.log(updateuserarray);
         renderUser(updateuserarray);
-        
+
 
 
         /*var uusername = $("#"+i).children(".wbdv-username").html();
@@ -159,6 +160,11 @@
         $firstNameFld.val("");
         $lastNameFld.val("");
         $roleFld.val("");
+        $thead1 =$("thead");
+        var removeform = $(".wbdv-form");
+        removeform.remove();
+        $thead1.append(formclone);
+
 
 
     }
