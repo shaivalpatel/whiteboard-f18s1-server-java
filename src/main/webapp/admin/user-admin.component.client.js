@@ -48,10 +48,11 @@ var formclone
             role: role
         };
 
-        userArray.push(user);
+        userService.createUser(user);
+        findAllUsers();
 
-        console.log(userArray);
-        renderUsers(userArray);
+
+
 
 
 
@@ -59,6 +60,7 @@ var formclone
     function findAllUsers() {
         var u = userService
             .findAllUsers();
+        userArray=[]
         for (n=0;n<u.length;n++){
             userArray.push(u[n]);
         }
@@ -73,23 +75,7 @@ var formclone
         var t = n.parents(".wbdv-template");
 
         ji = t.attr("id");
-        console.log(ji);
-        for (i = 0; i < userArray.length; i++) {
-
-            if (ji == userArray[i].id) {
-                console.log(userArray[i]);
-
-                var updateuserarray={
-                    username: userArray[i].username,
-                    firstName: userArray[i].firstName,
-                    lastName: userArray[i].lastName,
-                    role: userArray[i].role
-                }
-
-            }
-        }
-
-        console.log(updateuserarray);
+        var updateuserarray= userService.findUserById(ji);
         renderUser(updateuserarray);
 
 
@@ -102,8 +88,12 @@ var formclone
     }
     function deleteUser(event) {
         var button=$(event.currentTarget);
+
         var tr = button.parents(".wbdv-template");
-        tr.remove();
+        ids=(tr.attr("id"));
+        userService.deleteUser(ids);
+        findAllUsers();
+
     }
     function selectUser() {
         $usernameFld = $("#usernameFld")
@@ -138,23 +128,15 @@ var formclone
     }
     function updateUser() {
         console.log(userArray);
-        for (i = 0; i < userArray.length; i++) {
-
-            if (ji == userArray[i].id) {
-                console.log(userArray[i]);
-                console.log($usernameFld)
-                userArray[i].username = $usernameFld.val();
-                userArray[i].firstName = $firstNameFld.val();
-                userArray[i].lastName = $lastNameFld.val();
-                userArray[i].role = $roleFld.val();
-                console.log(userArray[i])
-
-
-            }
-            renderUsers(userArray);
-
+        var updateuser={
+            username :$usernameFld.val(),
+            firstName : $firstNameFld.val(),
+            lastName : $lastNameFld.val(),
+            role : $roleFld.val()
 
         }
+        userService.updateUser(ji,updateuser)
+        findAllUsers();
 
         $usernameFld.val("");
         $firstNameFld.val("");
