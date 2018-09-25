@@ -5,14 +5,15 @@
     var $firstNameFld, $lastNameFld,$roleFld;
     var $userRowTemplate, $tbody;
     var userService = new AdminUserServiceClient();
-var formclone
+    var formclone;
     var searchUsers =[];
     var userArray = [];
-
     var ji;
+
+
     $(main);
     function main(){
-        formclone=$(".wbdv-form").clone();
+
         $usernameFld = $('#usernameFld');
         $passwordFld = $('#passwordFld');
         $firstNameFld = $('#firstNameFld');
@@ -23,10 +24,11 @@ var formclone
         $roleFld =$("#roleFld");
         $createBtn.click(createUser);
         $searchBtn.click(selectUser);
+        formclone=$(".wbdv-form").clone();
         $userRowTemplate= $(".wbdv-template");
         $tbody = $(".wbdv-tbody");
-
         findAllUsers();
+
     }
 
 
@@ -50,10 +52,27 @@ var formclone
         userService.createUser(user);
         findAllUsers();
 
-        $thead2 =$("thead");
-        var removeform = $(".wbdv-form");
-        removeform.remove();
-        $thead2.append(formclone);
+        var updateform = $(".wbdv-form");
+        var uu= $(".wbdv-form").clone();
+
+        uu.find("#usernameFld").val("");
+        uu.find("#firstNameFld").val("");
+        uu.find("#lastNameFld").val("");
+        uu.find("#roleFld").val("");
+
+        uu.find('#createBtn').click(createUser);
+
+
+        $thead = $("thead");
+
+        updateform.remove();
+
+        $thead.append(uu)
+        $usernameFld = $("#usernameFld")
+        $passwordFld = $('#passwordFld');
+        $firstNameFld = $("#firstNameFld")
+        $lastNameFld =$("#lastNameFld")
+
 
 
 
@@ -62,7 +81,7 @@ var formclone
     function findAllUsers() {
         var u = userService
             .findAllUsers();
-        userArray=[]
+        userArray=[];
         for (n=0;n<u.length;n++){
             userArray.push(u[n]);
         }
@@ -75,13 +94,9 @@ var formclone
 
         var n = $(event.currentTarget);
         var t = n.parents(".wbdv-template");
-
         ji = t.attr("id");
         var updateuserarray= userService.findUserById(ji);
         renderUser(updateuserarray);
-
-
-
         /*var uusername = $("#"+i).children(".wbdv-username").html();
         var ufname = $("#"+i).children(".wbdv-first-name").html();
         var ulname = $("#"+i).children(".wbdv-last-name").html();
@@ -90,7 +105,6 @@ var formclone
     }
     function deleteUser(event) {
         var button=$(event.currentTarget);
-
         var tr = button.parents(".wbdv-template");
         ids=(tr.attr("id"));
         userService.deleteUser(ids);
@@ -100,11 +114,11 @@ var formclone
     function selectUser() {
         $usernameFld = $("#usernameFld")
         $passwordFld = $('#passwordFld');
-        $firstNameFld = $("#firstNameFld")
-        $lastNameFld =$("#lastNameFld");
-        $roleFld =$("#roleFld");
+        $firstNameFld =$("#firstNameFld")
+        $lastNameFld = $("#lastNameFld");
+        $roleFld =     $("#roleFld");
 
-        searchUsers=[]
+        searchUsers=[];
         for (i=0; i<userArray.length;i++){
             var suser=userArray[i];
 
@@ -114,7 +128,8 @@ var formclone
                 || $roleFld.val() == suser.role
                 || ((" "+suser.username).indexOf($usernameFld.val())>0)
                 || ((" "+suser.firstName).indexOf($firstNameFld.val())>0)
-                ||((" "+suser.lastName).indexOf($lastNameFld.val())>0)){
+                || ((" "+suser.lastName).indexOf($lastNameFld.val())>0))
+            {
 
                 searchUsers.push(suser)
 
@@ -136,19 +151,31 @@ var formclone
             lastName : $lastNameFld.val(),
             role : $roleFld.val()
 
-        }
-        userService.updateUser(ji,updateuser)
+        };
+        userService.updateUser(ji,updateuser);
         findAllUsers();
 
-        $usernameFld.val("");
-        $firstNameFld.val("");
-        $lastNameFld.val("");
-        $roleFld.val("");
-        $thead1 =$("thead");
-        var removeform = $(".wbdv-form");
-        removeform.remove();
-        $thead1.append(formclone);
 
+        var updateform = $(".wbdv-form");
+        var uu= $(".wbdv-form").clone();
+
+        uu.find("#usernameFld").val("");
+        uu.find("#firstNameFld").val("");
+        uu.find("#lastNameFld").val("");
+        uu.find("#roleFld").val("");
+
+        uu.find('#createBtn').click(createUser);
+
+
+        $thead = $("thead");
+
+        updateform.remove();
+
+        $thead.append(uu)
+        $usernameFld = $("#usernameFld")
+        $passwordFld = $('#passwordFld');
+        $firstNameFld = $("#firstNameFld")
+        $lastNameFld =$("#lastNameFld")
 
 
     }

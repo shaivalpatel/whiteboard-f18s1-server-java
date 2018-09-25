@@ -37,7 +37,7 @@ function AdminUserServiceClient() {
 
     function createUser(user){
         users.push(user);
-        console.log(users)
+
         return users;
 
     }
@@ -73,7 +73,10 @@ function AdminUserServiceClient() {
             if(id==users[i].id){
                 users.splice(i,1);
             }
+
         }
+
+        console.log(users);
         
     }
     
