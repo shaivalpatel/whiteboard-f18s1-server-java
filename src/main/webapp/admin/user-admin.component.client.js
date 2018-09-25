@@ -17,7 +17,7 @@
         $firstNameFld = $('#firstNameFld');
         $lastNameFld = $('#lastNameFld');
         $createBtn = $('#createBtn');
-        $updateBtn= $('#updateBtn');
+
         $searchBtn = $(".wbdv-search");
         $roleFld =$("#roleFld");
         console.log($roleFld.val());
@@ -41,9 +41,9 @@
         var role = $roleFld.val();
         var user = {
             id: timestamp,
-          username: username,
-          firstName: firstname,
-          lastName: lastname,
+            username: username,
+            firstName: firstname,
+            lastName: lastname,
             role: role
         };
 
@@ -67,6 +67,7 @@
     }
 
     function findUserById(event) {
+
         var n = $(event.currentTarget);
         var t = n.parents(".wbdv-template");
 
@@ -89,6 +90,7 @@
         $updateBtn= $('#updateBtn');
         console.log(updateuserarray);
         renderUser(updateuserarray);
+        
 
 
         /*var uusername = $("#"+i).children(".wbdv-username").html();
@@ -109,13 +111,17 @@
         $lastNameFld =$("#lastNameFld");
         $roleFld =$("#roleFld");
 
-
+        searchUsers=[]
         for (i=0; i<userArray.length;i++){
             var suser=userArray[i];
+
             if ($usernameFld.val()==suser.username
                 || $firstNameFld.val()== suser.firstName
                 || $lastNameFld.val()==suser.lastName
-                || $roleFld.val() == suser.role){
+                || $roleFld.val() == suser.role
+                || ((" "+suser.username).indexOf($usernameFld.val())>0)
+                || ((" "+suser.firstName).indexOf($firstNameFld.val())>0)
+                ||((" "+suser.lastName).indexOf($lastNameFld.val())>0)){
 
                 searchUsers.push(suser)
 
@@ -179,8 +185,6 @@
 
         $thead.append(uu)
         $usernameFld = $("#usernameFld")
-        console.log($usernameFld);
-
         $passwordFld = $('#passwordFld');
         $firstNameFld = $("#firstNameFld")
         $lastNameFld =$("#lastNameFld")
